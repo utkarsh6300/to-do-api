@@ -15,6 +15,10 @@ app.get('/',(req,res)=>{
 app.use('/api/registeruser',require('./routes/api/registeruser'));
 app.use('/api/login',require('./routes/api/login'));
 app.use('/api/forgetusername',require('./routes/api/forgetusername'));
+app.use('/api/addtodo',require('./routes/api/addtodo'));
+app.use('/api/updatetodo',require('./routes/api/updatetodo'));
+app.use('/api/listtodo',require('./routes/api/listtodo'));
+app.use('/api/deletetodo',require('./routes/api/deletetodo'));
 
 
 const PORT=5000;
