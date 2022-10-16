@@ -23,14 +23,15 @@ router.post(
           .not()
           .isEmpty(),
 
-        check('duedate').custom(value=>{ 
-            let enteredDate=new Date(value);
-            let todaysDate=new Date();
-            if(enteredDate<=todaysDate){
-                throw new Error("Invalid Date,must be in future");
-            }
-            return true;
-        })
+        check('duedate').isDate()
+        // custom(value=>{ 
+        //     let enteredDate=new Date(value);
+        //     let todaysDate=new Date();
+        //     if(enteredDate<=todaysDate){
+        //         throw new Error("Invalid Date,must be in future");
+        //     }
+        //     return true;
+        // })
 
         
       ]

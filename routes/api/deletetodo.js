@@ -9,7 +9,7 @@ const Todo = require('../../models/Todo');
 // @access   Private
 router.delete('/', auth, async (req, res) => {
     try {
-      const todosdeleted = await Todo.delete({user:req.user.id});
+      const todosdeleted = await Todo.deleteMany({user:req.user.id});
       res.json(todosdeleted);
     } catch (err) {
       console.error(err.message);
@@ -20,7 +20,7 @@ router.delete('/', auth, async (req, res) => {
   // @route    DELETE api/listtodo/:id
   // @desc     Delete todo by ID
   // @access   Private
-  router.get('/:id', auth, async (req, res) => {
+  router.delete('/:id', auth, async (req, res) => {
     try {
       const deletedtodo = await Todo.deleteOne({_id:req.params.id,user:req.user.id});
   

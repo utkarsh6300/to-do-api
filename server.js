@@ -19,6 +19,7 @@ app.use('/api/addtodo',require('./routes/api/addtodo'));
 app.use('/api/updatetodo',require('./routes/api/updatetodo'));
 app.use('/api/listtodo',require('./routes/api/listtodo'));
 app.use('/api/deletetodo',require('./routes/api/deletetodo'));
+app.use('/api/analysetodo',require('./routes/api/analysetodo'));
 
 
 const PORT=5000;
