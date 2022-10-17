@@ -20,6 +20,7 @@ app.use('/api/updatetodo',require('./routes/api/updatetodo'));
 app.use('/api/listtodo',require('./routes/api/listtodo'));
 app.use('/api/deletetodo',require('./routes/api/deletetodo'));
 app.use('/api/analysetodo',require('./routes/api/analysetodo'));
+app.use('/api/forgetpassword',require('./routes/api/forget-password'));
 
 
 const PORT=process.env.PORT||5000;
