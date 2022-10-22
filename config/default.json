@@ -1,4 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://utkarsh6:utkarsh6@database1.nybmam1.mongodb.net/todo?retryWrites=true&w=majority",
-   "jwtSecret":"firsttoken123"
+    "mongoURI":"your mongo uri",
+   "jwtSecret":"secret token"
 }
