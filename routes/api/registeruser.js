@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const { check ,validationResult}=require('express-validator');
 
-const config=require('config');
+
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
 
@@ -65,7 +65,7 @@ const payload={
 
 jwt.sign(
   payload,
-  config.get('jwtSecret'),
+  process.env.JWT_SECRET,
   { expiresIn:3600000 },
   (err,token)=>{
     if(err) throw err;

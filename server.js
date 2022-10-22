@@ -22,7 +22,7 @@ app.use('/api/deletetodo',require('./routes/api/deletetodo'));
 app.use('/api/analysetodo',require('./routes/api/analysetodo'));
 
 
-const PORT=5000;
+const PORT=process.env.PORT||5000;
 
 app.listen(PORT,()=>{
     console.log(`server started at ${PORT}`);
